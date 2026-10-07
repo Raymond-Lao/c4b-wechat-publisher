@@ -1,0 +1,13 @@
+{
+  "eval_id": 0,
+  "eval_name": "basic",
+  "prompt": "把这篇《内容生产的瓶颈不是写字》转成能直接粘进公众号编辑器的 HTML，不用加别的选项。",
+  "expectations": [
+    "输出了非空的 HTML 文件",
+    "输出里不含 h1 / div / script / style / iframe",
+    "输出里不含 class= 属性",
+    "剥掉标签后的可见文字里没有泄漏的 CSS 声明"
+  ],
+  "configuration": "with_skill",
+  "run_number": 1
+}

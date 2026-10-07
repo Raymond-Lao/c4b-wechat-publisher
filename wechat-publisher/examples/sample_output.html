@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公众号文章预览</title>
+</head>
+<body style="max-width: 640px; margin: 0 auto; padding: 24px 18px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background-color: #ffffff; color: #22303f;">
+<p style="font-size: 13px; color: #5b6b7c; text-align: center; margin: 0 0 6px 0; letter-spacing: 0.5px;">李瑞翔</p>
+<h2 style="font-size: 22px; font-weight: bold; line-height: 1.5; color: #1a73e8; margin: 32px 0 14px 0; border-left: 4px solid #1a73e8;">我用 AI 写了一个自动化技能——从想法到产品的全过程</h2>
+<p style="background-color: #eef4ff; color: #5b6b7c; font-size: 15px; line-height: 1.8; padding: 12px 16px; margin: 18px 0; border-left: 4px solid #1a73e8; border-radius: 0 8px 8px 0;">这篇文章记录了我在 Elite20 项目中创建第一个 Agent Skill 的完整过程。<br/>
+如果你也想把自己的能力变成可复用的 AI 技能包，希望我的经历对你有帮助。</p>
+<h2 style="font-size: 22px; font-weight: bold; line-height: 1.5; color: #1a73e8; margin: 32px 0 14px 0; border-left: 4px solid #1a73e8;">为什么要做技能包？</h2>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">在 AI 时代，<span style="font-weight: bold;">个人能力的价值不在于你自己用了多少次，而在于能被复制多少次</span>。</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">一个技能被 10 人用 = 放大 10 倍价值。被 100 人用 = 放大 100 倍。</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">传统的"教程"模式是：写一篇文章 → 别人看 → 别人自己操作。中间有大量信息丢失。</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">技能包模式是：<span style="font-weight: bold;">打包你的能力 → 别人安装 → 直接运行</span>。零信息损耗。</p>
+<h2 style="font-size: 22px; font-weight: bold; line-height: 1.5; color: #1a73e8; margin: 32px 0 14px 0; border-left: 4px solid #1a73e8;">我选了什么方向</h2>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">我选择做一个<span style="font-weight: bold;">微信文档分类器</span>——解决 Elite20 群里文件混乱的问题。</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">具体来说：</p>
+<ul style="margin: 12px 0;">
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;"><span style="font-weight: bold;">输入</span>：一个文件夹路径（微信群文件下载到本地的目录）</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;"><span style="font-weight: bold;">输出</span>：按作者 × 挑战分组的文档清单表 + Excel 文件</li>
+</ul>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">为什么选这个？因为这是我们每天都在经历的真实痛点：群里几十个文件，谁交了什么、缺了什么，没人知道。</p>
+<h2 style="font-size: 22px; font-weight: bold; line-height: 1.5; color: #1a73e8; margin: 32px 0 14px 0; border-left: 4px solid #1a73e8;">开发过程</h2>
+<h3 style="font-size: 17px; font-weight: bold; line-height: 1.6; color: #22303f; margin: 22px 0 10px 0;">第一步：用 AI 梳理需求</h3>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">我对 Claude 说：</p>
+<p style="background-color: #eef4ff; color: #5b6b7c; font-size: 15px; line-height: 1.8; padding: 12px 16px; margin: 18px 0; border-left: 4px solid #1a73e8; border-radius: 0 8px 8px 0;">"我们有一个微信群，大家往里面发各种文件。文件名有命名规范：姓名_挑战编号_内容.扩展名。我需要扫描一个文件夹，自动把文件按作者和挑战分类，找出谁缺了什么。"</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">Claude 帮我拆解了六步流水线：</p>
+<ol style="margin: 12px 0;">
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">扫描文件夹</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">识别作者</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">盘点文件</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">提取标题</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">映射到挑战</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">生成报告</li>
+</ol>
+<h3 style="font-size: 17px; font-weight: bold; line-height: 1.6; color: #22303f; margin: 22px 0 10px 0;">第二步：让 AI 写代码</h3>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">我没有自己写一行代码。整个 Python 脚本（500 行）都是 AI 生成的。</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">但<span style="font-weight: bold;">我做了什么</span>呢？</p>
+<ul style="margin: 12px 0;">
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">我定义了信号评分机制：每个挑战有关键词、扩展名、路径片段三种信号</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">我审阅了每一个函数的逻辑</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">我发现 AI 第一版的作者识别在中文文件名上有 bug，指出问题后 AI 修复了</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">我设计了缺口分析的逻辑（比较实际提交 vs 预期产出物清单）</li>
+</ul>
+<h3 style="font-size: 17px; font-weight: bold; line-height: 1.6; color: #22303f; margin: 22px 0 10px 0;">第三步：测试和迭代</h3>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">用 9 个模拟文件测试：</p>
+<table style="border-collapse: collapse; margin: 16px 0; font-size: 14px; width: 100%;">
+<thead>
+<tr>
+<th style="background-color: #eef4ff; color: #22303f; font-weight: bold; padding: 9px 10px; text-align: left; border: 1px solid #d7e3f4;">挑战</th>
+<th style="background-color: #eef4ff; color: #22303f; font-weight: bold; padding: 9px 10px; text-align: left; border: 1px solid #d7e3f4;">文件数</th>
+<th style="background-color: #eef4ff; color: #22303f; font-weight: bold; padding: 9px 10px; text-align: left; border: 1px solid #d7e3f4;">识别结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">C1 课程资料</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">4</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">全部正确识别</td>
+</tr>
+<tr>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">C2 论文</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">2</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">全部正确识别</td>
+</tr>
+<tr>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">C3 参与</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">2</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">全部正确识别</td>
+</tr>
+<tr>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">C0 未分类</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">1</td>
+<td style="padding: 9px 10px; border: 1px solid #d7e3f4; color: #22303f; line-height: 1.6;">正确标记为"未分类"</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">缺口分析正确检测到 C2 缺少 <span style="background-color: #f5f5f5; color: #d73a49; font-size: 14px; padding: 2px 5px; border-radius: 3px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace;">paper.pdf</span> 和 <span style="background-color: #f5f5f5; color: #d73a49; font-size: 14px; padding: 2px 5px; border-radius: 3px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace;">summary.md</span>。</p>
+<h2 style="font-size: 22px; font-weight: bold; line-height: 1.5; color: #1a73e8; margin: 32px 0 14px 0; border-left: 4px solid #1a73e8;">关键收获</h2>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;"><span style="font-weight: bold;">第一，AI 不是替代你思考——而是放大你的思考。</span> 我定义方向，AI 执行细节。我发现 bug，AI 修复。这才是"驾驭 AI"。</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;"><span style="font-weight: bold;">第二，好的技能设计 = 好的问题定义。</span> 如果你不能用一句话说清"输入什么、输出什么"，你的技能就不够好。</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;"><span style="font-weight: bold;">第三，真实使用是最好的测试。</span> 理论上完美的技能，放到真实数据上一跑，各种边界情况就出来了。</p>
+<h2 style="font-size: 22px; font-weight: bold; line-height: 1.5; color: #1a73e8; margin: 32px 0 14px 0; border-left: 4px solid #1a73e8;">你也可以试试</h2>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">如果你想做自己的技能，三步走：</p>
+<ol style="margin: 12px 0;">
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">找到你经常重复做的事情</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">问自己：能不能打包成"输入 X → 输出 Y"？</li>
+<li style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 6px 0; letter-spacing: 0.3px;">用 AI 帮你实现，你来审阅和迭代</li>
+</ol>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;">记住：<span style="font-weight: bold;">先交比不交强，迭代比完美主义强。</span></p>
+<p style="text-align: center; color: #d7e3f4; letter-spacing: 6px; font-size: 13px; margin: 30px 0;">— — —</p>
+<p style="font-size: 16px; line-height: 1.75; color: #22303f; margin: 14px 0; letter-spacing: 0.3px;"><span style="font-style: italic;">本文使用 AI 辅助写作，使用 wechat-publisher 技能转换为公众号格式。</span></p>
+<p style="font-size: 12px; line-height: 1.9; color: #5b6b7c; text-align: center; margin: 40px 0 0 0; padding-top: 18px; border-top: 1px solid #d7e3f4;">© 李瑞翔　保留所有权利<br>本文由 wechat-publisher 技能自动排版生成</p>
+</body>
+</html>

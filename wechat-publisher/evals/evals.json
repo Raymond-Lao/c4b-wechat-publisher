@@ -1,0 +1,85 @@
+{
+  "skill_name": "wechat-publisher",
+  "generated_by": "skill-creator eval 流程（init → 用例 → 跑 → grading → benchmark → 审阅页）",
+  "notes": [
+    "prompt 是「用户会怎么提这个需求」的自然语言描述；实际执行命令见 evals/run_evals.py 的 CLI_ARGS（两者必须对得上，否则 benchmark 就没意义）。",
+    "expectations 是给人看的成功判据；机器判分逻辑在同文件的 CHECKS 里，逐条一一对应。",
+    "without_skill 配置跑的是 EduSeed starter kit 的原版脚本，且按其支持的最大能力调用（它不支持任何命令行选项）。"
+  ],
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "把这篇《内容生产的瓶颈不是写字》转成能直接粘进公众号编辑器的 HTML，不用加别的选项。",
+      "expected_output": "一份不含 h1 / div / script / style / class 的 HTML，正文和表格完整，可见文字里不出现任何 CSS 代码",
+      "files": ["evals/files/basic.md"],
+      "expectations": [
+        "输出了非空的 HTML 文件",
+        "输出里不含 h1 / div / script / style / iframe",
+        "输出里不含 class= 属性",
+        "剥掉标签后的可见文字里没有泄漏的 CSS 声明"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "这篇稿子用蓝色主题，开头自动生成目录，再补上标题、作者和摘要。",
+      "expected_output": "主色为蓝色主题的 HTML，开头有署名行与摘要块，目录按 h2/h3 编号列出且没有把 CSS 文本带出来",
+      "files": ["evals/files/themed.md"],
+      "expectations": [
+        "h2 主色是该主题的蓝色（#1a73e8）",
+        "开头出现作者署名与摘要文字",
+        "目录列出了全部 3 个 h2 小标题",
+        "目录里没有把 padding-left 之类的 CSS 文本泄漏出来"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "稿子里用了 ::: 写法的四种高亮框，帮我正确渲染出来，框里的内容一个都不能少。",
+      "expected_output": "4 个带底色和左侧竖线的高亮框，框内列表完整，标题里的 markdown 加粗正常生效（不出现裸露星号）",
+      "files": ["evals/files/callouts.md"],
+      "expectations": [
+        "4 个高亮框都被渲染成带背景色的块",
+        "practice 框里的 3 条有序列表文字全部保留",
+        "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+        "剥掉标签后仍能看到全部 4 个框的正文内容"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "这份稿子里有分隔线、多行引用、代码块和表格，转换之后这些结构都要还在。",
+      "expected_output": "分隔线可见、引用块保留多行与加粗、代码块保留换行、表格带边框保留",
+      "files": ["evals/files/structure.md"],
+      "expectations": [
+        "分隔线被保留为可见的分隔符（不是整条消失）",
+        "引用块保留多行换行，没有被压成一行",
+        "引用块里的加粗没有丢失",
+        "代码块保留至少 4 行换行",
+        "表格被保留下来"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "输入是一份 Word 文档，里面有标题、正文、列表、引用和一张表格，帮我把这些结构都搬到公众号 HTML 里。",
+      "expected_output": "标题降级为 h2、正文与引用完整、列表保留为 ul/ol、表格保留为 table，且不含违规标签",
+      "files": ["examples/sample_report.docx"],
+      "expectations": [
+        "输出了非空的 HTML 文件",
+        "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+        "列表项保留为 ul/ol + li，没有被压成普通段落",
+        "表格保留为 table 元素",
+        "不含 h1 / div / script / style 等违规标签"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "稿子里中英文混排，还有一张本地图片，这两件事都要处理好。",
+      "expected_output": "中英文之间自动补空格（代码块内不补），本地图片被嵌成 base64 并带 max-width，图注显示出来",
+      "files": ["evals/files/cjk_images.md"],
+      "expectations": [
+        "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+        "代码块内的 range(3) 没有被插入空格",
+        "本地图片被嵌入为 data:image/png;base64",
+        "img 标签带 max-width 样式"
+      ]
+    }
+  ]
+}

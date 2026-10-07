@@ -1,0 +1,53 @@
+{
+  "expectations": [
+    {
+      "text": "输出了非空的 HTML 文件",
+      "passed": true,
+      "evidence": "输出 4065 字节，退出码 0"
+    },
+    {
+      "text": "输出里不含 h1 / div / script / style / iframe",
+      "passed": true,
+      "evidence": "h1/div/script/style/iframe 均未出现"
+    },
+    {
+      "text": "输出里不含 class= 属性",
+      "passed": true,
+      "evidence": "无 class= 属性"
+    },
+    {
+      "text": "剥掉标签后的可见文字里没有泄漏的 CSS 声明",
+      "passed": true,
+      "evidence": "可见文字中没有 CSS 声明泄漏"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "executor": 1,
+      "grader": 4
+    },
+    "total_tool_calls": 5,
+    "total_steps": 1,
+    "files_created": [
+      "article.html",
+      "stdout.txt"
+    ],
+    "errors_encountered": 0,
+    "output_chars": 4065,
+    "transcript_chars": 158
+  },
+  "timing": {
+    "total_duration_seconds": 1.655
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

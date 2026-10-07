@@ -1,0 +1,13 @@
+{
+  "eval_id": 5,
+  "eval_name": "cjk-images",
+  "prompt": "稿子里中英文混排，还有一张本地图片，这两件事都要处理好。",
+  "expectations": [
+    "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+    "代码块内的 range(3) 没有被插入空格",
+    "本地图片被嵌入为 data:image/png;base64",
+    "img 标签带 max-width 样式"
+  ],
+  "configuration": "with_skill",
+  "run_number": 2
+}

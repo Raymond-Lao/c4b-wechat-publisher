@@ -1,0 +1,14 @@
+{
+  "eval_id": 4,
+  "eval_name": "sample-report",
+  "prompt": "输入是一份 Word 文档，里面有标题、正文、列表、引用和一张表格，帮我把这些结构都搬到公众号 HTML 里。",
+  "expectations": [
+    "输出了非空的 HTML 文件",
+    "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+    "列表项保留为 ul/ol + li，没有被压成普通段落",
+    "表格保留为 table 元素",
+    "不含 h1 / div / script / style 等违规标签"
+  ],
+  "configuration": "with_skill",
+  "run_number": 1
+}

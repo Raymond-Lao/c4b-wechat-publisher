@@ -1,0 +1,53 @@
+{
+  "expectations": [
+    {
+      "text": "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+      "passed": true,
+      "evidence": "「用 Python」「2026 年」都已补空格"
+    },
+    {
+      "text": "代码块内的 range(3) 没有被插入空格",
+      "passed": true,
+      "evidence": "代码块内 range(3) 保持原样"
+    },
+    {
+      "text": "本地图片被嵌入为 data:image/png;base64",
+      "passed": true,
+      "evidence": "本地图片已嵌成 base64"
+    },
+    {
+      "text": "img 标签带 max-width 样式",
+      "passed": true,
+      "evidence": "img 带 max-width"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "executor": 1,
+      "grader": 4
+    },
+    "total_tool_calls": 5,
+    "total_steps": 1,
+    "files_created": [
+      "article.html",
+      "stdout.txt"
+    ],
+    "errors_encountered": 0,
+    "output_chars": 7726,
+    "transcript_chars": 193
+  },
+  "timing": {
+    "total_duration_seconds": 1.602
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

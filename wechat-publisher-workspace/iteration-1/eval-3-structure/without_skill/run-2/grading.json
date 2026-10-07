@@ -1,0 +1,58 @@
+{
+  "expectations": [
+    {
+      "text": "分隔线被保留为可见的分隔符（不是整条消失）",
+      "passed": false,
+      "evidence": "分隔线消失（hr 被吞掉，基线缺陷 1 复现）"
+    },
+    {
+      "text": "引用块保留多行换行，没有被压成一行",
+      "passed": false,
+      "evidence": "引用块内换行符 0 个（需要 ≥2）"
+    },
+    {
+      "text": "引用块里的加粗没有丢失",
+      "passed": false,
+      "evidence": "引用块内的加粗丢失"
+    },
+    {
+      "text": "代码块保留至少 4 行换行",
+      "passed": false,
+      "evidence": "没有找到代码块"
+    },
+    {
+      "text": "表格被保留下来",
+      "passed": true,
+      "evidence": "表格保留且表头内容在"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 4,
+    "total": 5,
+    "pass_rate": 0.2
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "executor": 1,
+      "grader": 5
+    },
+    "total_tool_calls": 6,
+    "total_steps": 1,
+    "files_created": [
+      "article.html",
+      "stdout.txt"
+    ],
+    "errors_encountered": 0,
+    "output_chars": 3147,
+    "transcript_chars": 538
+  },
+  "timing": {
+    "total_duration_seconds": 1.541
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

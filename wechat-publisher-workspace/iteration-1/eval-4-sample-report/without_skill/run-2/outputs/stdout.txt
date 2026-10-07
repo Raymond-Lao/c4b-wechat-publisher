@@ -1,0 +1,22 @@
+$ python.exe convert_to_wechat.py sample_report.docx C:\Users\lrx\AppData\Local\Temp\c4b_eval_4wigdu4f\article.html
+
+[exit 0]  1.36s
+
+--- stdout ---
+📖 Reading sample_report.docx (.docx)...
+🧹 Sanitizing HTML for WeChat...
+🎨 Applying WeChat styles...
+✂️  Cleaning non-allowed attributes...
+
+✅ Done! C:\Users\lrx\AppData\Local\Temp\c4b_eval_4wigdu4f\article.html (1.3 KB)
+
+📋 Next steps:
+   1. Open C:\Users\lrx\AppData\Local\Temp\c4b_eval_4wigdu4f\article.html in a browser to preview
+   2. Ctrl+A → Ctrl+C (select all, copy)
+   3. Go to mp.weixin.qq.com → create new article
+   4. Ctrl+V (paste into editor)
+   5. Upload images via WeChat media library if needed
+   6. Preview on phone → publish!
+
+--- stderr ---
+

@@ -1,0 +1,12 @@
+$ python.exe convert_to_wechat.py basic.md C:\Users\lrx\AppData\Local\Temp\c4b_eval_hvz_77uk\article.html --quiet
+
+[exit 0]  1.55s
+
+--- stdout ---
+
+[OK] C:\Users\lrx\AppData\Local\Temp\c4b_eval_hvz_77uk\article.html 已生成（5.1 KB，主题：默认 · 中性灰）
+     已自动补全：标题 / 摘要（从正文提取，原文没有写）
+     自检通过：无违规标签 / 无 class / 无 JS
+
+--- stderr ---
+

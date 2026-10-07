@@ -1,0 +1,1501 @@
+{
+  "metadata": {
+    "skill_name": "wechat-publisher",
+    "skill_path": "C:\\Users\\lrx\\AppData\\Local\\Temp\\c4b_v4\\wechat-publisher",
+    "executor_model": "确定性脚本（非 LLM 执行）",
+    "analyzer_model": "规则式分析（run_evals.py:analyze）",
+    "timestamp": "2026-10-06T16:00:38Z",
+    "evals_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.496,
+        "tokens": 4065,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 4065 字节，退出码 0"
+        },
+        {
+          "text": "输出里不含 h1 / div / script / style / iframe",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        },
+        {
+          "text": "输出里不含 class= 属性",
+          "passed": true,
+          "evidence": "无 class= 属性"
+        },
+        {
+          "text": "剥掉标签后的可见文字里没有泄漏的 CSS 声明",
+          "passed": true,
+          "evidence": "可见文字中没有 CSS 声明泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.552,
+        "tokens": 4065,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 4065 字节，退出码 0"
+        },
+        {
+          "text": "输出里不含 h1 / div / script / style / iframe",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        },
+        {
+          "text": "输出里不含 class= 属性",
+          "passed": true,
+          "evidence": "无 class= 属性"
+        },
+        {
+          "text": "剥掉标签后的可见文字里没有泄漏的 CSS 声明",
+          "passed": true,
+          "evidence": "可见文字中没有 CSS 声明泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.655,
+        "tokens": 4065,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 4065 字节，退出码 0"
+        },
+        {
+          "text": "输出里不含 h1 / div / script / style / iframe",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        },
+        {
+          "text": "输出里不含 class= 属性",
+          "passed": true,
+          "evidence": "无 class= 属性"
+        },
+        {
+          "text": "剥掉标签后的可见文字里没有泄漏的 CSS 声明",
+          "passed": true,
+          "evidence": "可见文字中没有 CSS 声明泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.771,
+        "tokens": 4662,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "h2 主色是该主题的蓝色（#1a73e8）",
+          "passed": true,
+          "evidence": "h2 主色 = #1a73e8"
+        },
+        {
+          "text": "开头出现作者署名与摘要文字",
+          "passed": true,
+          "evidence": "作者署名与摘要都出现在开头"
+        },
+        {
+          "text": "目录列出了全部 3 个 h2 小标题",
+          "passed": true,
+          "evidence": "3 个 h2 都出现在目录中（各出现 ≥2 次）"
+        },
+        {
+          "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+          "passed": true,
+          "evidence": "目录里没有样式文本泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.677,
+        "tokens": 4662,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "h2 主色是该主题的蓝色（#1a73e8）",
+          "passed": true,
+          "evidence": "h2 主色 = #1a73e8"
+        },
+        {
+          "text": "开头出现作者署名与摘要文字",
+          "passed": true,
+          "evidence": "作者署名与摘要都出现在开头"
+        },
+        {
+          "text": "目录列出了全部 3 个 h2 小标题",
+          "passed": true,
+          "evidence": "3 个 h2 都出现在目录中（各出现 ≥2 次）"
+        },
+        {
+          "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+          "passed": true,
+          "evidence": "目录里没有样式文本泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.707,
+        "tokens": 4662,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "h2 主色是该主题的蓝色（#1a73e8）",
+          "passed": true,
+          "evidence": "h2 主色 = #1a73e8"
+        },
+        {
+          "text": "开头出现作者署名与摘要文字",
+          "passed": true,
+          "evidence": "作者署名与摘要都出现在开头"
+        },
+        {
+          "text": "目录列出了全部 3 个 h2 小标题",
+          "passed": true,
+          "evidence": "3 个 h2 都出现在目录中（各出现 ≥2 次）"
+        },
+        {
+          "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+          "passed": true,
+          "evidence": "目录里没有样式文本泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.536,
+        "tokens": 2446,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "4 个高亮框都被渲染成带背景色的块",
+          "passed": true,
+          "evidence": "带底色高亮块 4 个，缺失标题 无"
+        },
+        {
+          "text": "practice 框里的 3 条有序列表文字全部保留",
+          "passed": true,
+          "evidence": "列表项齐全，编号标记 在"
+        },
+        {
+          "text": "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+          "passed": true,
+          "evidence": "标题加粗正常解析，无裸露星号"
+        },
+        {
+          "text": "剥掉标签后仍能看到全部 4 个框的正文内容",
+          "passed": true,
+          "evidence": "4 个高亮框的正文全部保留"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.676,
+        "tokens": 2446,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "4 个高亮框都被渲染成带背景色的块",
+          "passed": true,
+          "evidence": "带底色高亮块 4 个，缺失标题 无"
+        },
+        {
+          "text": "practice 框里的 3 条有序列表文字全部保留",
+          "passed": true,
+          "evidence": "列表项齐全，编号标记 在"
+        },
+        {
+          "text": "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+          "passed": true,
+          "evidence": "标题加粗正常解析，无裸露星号"
+        },
+        {
+          "text": "剥掉标签后仍能看到全部 4 个框的正文内容",
+          "passed": true,
+          "evidence": "4 个高亮框的正文全部保留"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.554,
+        "tokens": 2446,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "4 个高亮框都被渲染成带背景色的块",
+          "passed": true,
+          "evidence": "带底色高亮块 4 个，缺失标题 无"
+        },
+        {
+          "text": "practice 框里的 3 条有序列表文字全部保留",
+          "passed": true,
+          "evidence": "列表项齐全，编号标记 在"
+        },
+        {
+          "text": "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+          "passed": true,
+          "evidence": "标题加粗正常解析，无裸露星号"
+        },
+        {
+          "text": "剥掉标签后仍能看到全部 4 个框的正文内容",
+          "passed": true,
+          "evidence": "4 个高亮框的正文全部保留"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 1.469,
+        "tokens": 4481,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "分隔线被保留为可见的分隔符（不是整条消失）",
+          "passed": true,
+          "evidence": "分隔线可见"
+        },
+        {
+          "text": "引用块保留多行换行，没有被压成一行",
+          "passed": true,
+          "evidence": "引用块内换行符 2 个（需要 ≥2）"
+        },
+        {
+          "text": "引用块里的加粗没有丢失",
+          "passed": true,
+          "evidence": "引用块内加粗保留"
+        },
+        {
+          "text": "代码块保留至少 4 行换行",
+          "passed": true,
+          "evidence": "代码块内换行符 6 个（需要 ≥4）"
+        },
+        {
+          "text": "表格被保留下来",
+          "passed": true,
+          "evidence": "表格保留且表头内容在"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 1.629,
+        "tokens": 4481,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "分隔线被保留为可见的分隔符（不是整条消失）",
+          "passed": true,
+          "evidence": "分隔线可见"
+        },
+        {
+          "text": "引用块保留多行换行，没有被压成一行",
+          "passed": true,
+          "evidence": "引用块内换行符 2 个（需要 ≥2）"
+        },
+        {
+          "text": "引用块里的加粗没有丢失",
+          "passed": true,
+          "evidence": "引用块内加粗保留"
+        },
+        {
+          "text": "代码块保留至少 4 行换行",
+          "passed": true,
+          "evidence": "代码块内换行符 6 个（需要 ≥4）"
+        },
+        {
+          "text": "表格被保留下来",
+          "passed": true,
+          "evidence": "表格保留且表头内容在"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 1.663,
+        "tokens": 4481,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "分隔线被保留为可见的分隔符（不是整条消失）",
+          "passed": true,
+          "evidence": "分隔线可见"
+        },
+        {
+          "text": "引用块保留多行换行，没有被压成一行",
+          "passed": true,
+          "evidence": "引用块内换行符 2 个（需要 ≥2）"
+        },
+        {
+          "text": "引用块里的加粗没有丢失",
+          "passed": true,
+          "evidence": "引用块内加粗保留"
+        },
+        {
+          "text": "代码块保留至少 4 行换行",
+          "passed": true,
+          "evidence": "代码块内换行符 6 个（需要 ≥4）"
+        },
+        {
+          "text": "表格被保留下来",
+          "passed": true,
+          "evidence": "表格保留且表头内容在"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 1.456,
+        "tokens": 2694,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 2694 字节，退出码 0"
+        },
+        {
+          "text": "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+          "passed": true,
+          "evidence": "文档 15 处文字全部保留"
+        },
+        {
+          "text": "列表项保留为 ul/ol + li，没有被压成普通段落",
+          "passed": true,
+          "evidence": "li 4 个，ul/ol 都在"
+        },
+        {
+          "text": "表格保留为 table 元素",
+          "passed": true,
+          "evidence": "表格保留且单元格内容在"
+        },
+        {
+          "text": "不含 h1 / div / script / style 等违规标签",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 1.562,
+        "tokens": 2694,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 2694 字节，退出码 0"
+        },
+        {
+          "text": "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+          "passed": true,
+          "evidence": "文档 15 处文字全部保留"
+        },
+        {
+          "text": "列表项保留为 ul/ol + li，没有被压成普通段落",
+          "passed": true,
+          "evidence": "li 4 个，ul/ol 都在"
+        },
+        {
+          "text": "表格保留为 table 元素",
+          "passed": true,
+          "evidence": "表格保留且单元格内容在"
+        },
+        {
+          "text": "不含 h1 / div / script / style 等违规标签",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 1.555,
+        "tokens": 2694,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 2694 字节，退出码 0"
+        },
+        {
+          "text": "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+          "passed": true,
+          "evidence": "文档 15 处文字全部保留"
+        },
+        {
+          "text": "列表项保留为 ul/ol + li，没有被压成普通段落",
+          "passed": true,
+          "evidence": "li 4 个，ul/ol 都在"
+        },
+        {
+          "text": "表格保留为 table 元素",
+          "passed": true,
+          "evidence": "表格保留且单元格内容在"
+        },
+        {
+          "text": "不含 h1 / div / script / style 等违规标签",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.481,
+        "tokens": 7726,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+          "passed": true,
+          "evidence": "「用 Python」「2026 年」都已补空格"
+        },
+        {
+          "text": "代码块内的 range(3) 没有被插入空格",
+          "passed": true,
+          "evidence": "代码块内 range(3) 保持原样"
+        },
+        {
+          "text": "本地图片被嵌入为 data:image/png;base64",
+          "passed": true,
+          "evidence": "本地图片已嵌成 base64"
+        },
+        {
+          "text": "img 标签带 max-width 样式",
+          "passed": true,
+          "evidence": "img 带 max-width"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.473,
+        "tokens": 7726,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+          "passed": true,
+          "evidence": "「用 Python」「2026 年」都已补空格"
+        },
+        {
+          "text": "代码块内的 range(3) 没有被插入空格",
+          "passed": true,
+          "evidence": "代码块内 range(3) 保持原样"
+        },
+        {
+          "text": "本地图片被嵌入为 data:image/png;base64",
+          "passed": true,
+          "evidence": "本地图片已嵌成 base64"
+        },
+        {
+          "text": "img 标签带 max-width 样式",
+          "passed": true,
+          "evidence": "img 带 max-width"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.602,
+        "tokens": 7726,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+          "passed": true,
+          "evidence": "「用 Python」「2026 年」都已补空格"
+        },
+        {
+          "text": "代码块内的 range(3) 没有被插入空格",
+          "passed": true,
+          "evidence": "代码块内 range(3) 保持原样"
+        },
+        {
+          "text": "本地图片被嵌入为 data:image/png;base64",
+          "passed": true,
+          "evidence": "本地图片已嵌成 base64"
+        },
+        {
+          "text": "img 标签带 max-width 样式",
+          "passed": true,
+          "evidence": "img 带 max-width"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.598,
+        "tokens": 3167,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 3167 字节，退出码 0"
+        },
+        {
+          "text": "输出里不含 h1 / div / script / style / iframe",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        },
+        {
+          "text": "输出里不含 class= 属性",
+          "passed": true,
+          "evidence": "无 class= 属性"
+        },
+        {
+          "text": "剥掉标签后的可见文字里没有泄漏的 CSS 声明",
+          "passed": true,
+          "evidence": "可见文字中没有 CSS 声明泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "without_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.454,
+        "tokens": 3167,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 3167 字节，退出码 0"
+        },
+        {
+          "text": "输出里不含 h1 / div / script / style / iframe",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        },
+        {
+          "text": "输出里不含 class= 属性",
+          "passed": true,
+          "evidence": "无 class= 属性"
+        },
+        {
+          "text": "剥掉标签后的可见文字里没有泄漏的 CSS 声明",
+          "passed": true,
+          "evidence": "可见文字中没有 CSS 声明泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "without_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 1.48,
+        "tokens": 3167,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 3167 字节，退出码 0"
+        },
+        {
+          "text": "输出里不含 h1 / div / script / style / iframe",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        },
+        {
+          "text": "输出里不含 class= 属性",
+          "passed": true,
+          "evidence": "无 class= 属性"
+        },
+        {
+          "text": "剥掉标签后的可见文字里没有泄漏的 CSS 声明",
+          "passed": true,
+          "evidence": "可见文字中没有 CSS 声明泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 1.503,
+        "tokens": 2160,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "h2 主色是该主题的蓝色（#1a73e8）",
+          "passed": false,
+          "evidence": "h2 主色 = #333"
+        },
+        {
+          "text": "开头出现作者署名与摘要文字",
+          "passed": true,
+          "evidence": "作者署名与摘要都出现在开头"
+        },
+        {
+          "text": "目录列出了全部 3 个 h2 小标题",
+          "passed": false,
+          "evidence": "目录没列出: ['一、主题决定了文章的第一印象', '二、长文必须有目录', '三、元数据的三个字段']"
+        },
+        {
+          "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+          "passed": true,
+          "evidence": "目录里没有样式文本泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 1.435,
+        "tokens": 2160,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "h2 主色是该主题的蓝色（#1a73e8）",
+          "passed": false,
+          "evidence": "h2 主色 = #333"
+        },
+        {
+          "text": "开头出现作者署名与摘要文字",
+          "passed": true,
+          "evidence": "作者署名与摘要都出现在开头"
+        },
+        {
+          "text": "目录列出了全部 3 个 h2 小标题",
+          "passed": false,
+          "evidence": "目录没列出: ['一、主题决定了文章的第一印象', '二、长文必须有目录', '三、元数据的三个字段']"
+        },
+        {
+          "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+          "passed": true,
+          "evidence": "目录里没有样式文本泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 1.538,
+        "tokens": 2160,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "h2 主色是该主题的蓝色（#1a73e8）",
+          "passed": false,
+          "evidence": "h2 主色 = #333"
+        },
+        {
+          "text": "开头出现作者署名与摘要文字",
+          "passed": true,
+          "evidence": "作者署名与摘要都出现在开头"
+        },
+        {
+          "text": "目录列出了全部 3 个 h2 小标题",
+          "passed": false,
+          "evidence": "目录没列出: ['一、主题决定了文章的第一印象', '二、长文必须有目录', '三、元数据的三个字段']"
+        },
+        {
+          "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+          "passed": true,
+          "evidence": "目录里没有样式文本泄漏"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 1.493,
+        "tokens": 1594,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "4 个高亮框都被渲染成带背景色的块",
+          "passed": false,
+          "evidence": "带底色高亮块 0 个，缺失标题 无"
+        },
+        {
+          "text": "practice 框里的 3 条有序列表文字全部保留",
+          "passed": true,
+          "evidence": "列表项齐全，编号标记 在"
+        },
+        {
+          "text": "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+          "passed": true,
+          "evidence": "标题加粗正常解析，无裸露星号"
+        },
+        {
+          "text": "剥掉标签后仍能看到全部 4 个框的正文内容",
+          "passed": true,
+          "evidence": "4 个高亮框的正文全部保留"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 1.437,
+        "tokens": 1594,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "4 个高亮框都被渲染成带背景色的块",
+          "passed": false,
+          "evidence": "带底色高亮块 0 个，缺失标题 无"
+        },
+        {
+          "text": "practice 框里的 3 条有序列表文字全部保留",
+          "passed": true,
+          "evidence": "列表项齐全，编号标记 在"
+        },
+        {
+          "text": "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+          "passed": true,
+          "evidence": "标题加粗正常解析，无裸露星号"
+        },
+        {
+          "text": "剥掉标签后仍能看到全部 4 个框的正文内容",
+          "passed": true,
+          "evidence": "4 个高亮框的正文全部保留"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 1.52,
+        "tokens": 1594,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "4 个高亮框都被渲染成带背景色的块",
+          "passed": false,
+          "evidence": "带底色高亮块 0 个，缺失标题 无"
+        },
+        {
+          "text": "practice 框里的 3 条有序列表文字全部保留",
+          "passed": true,
+          "evidence": "列表项齐全，编号标记 在"
+        },
+        {
+          "text": "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+          "passed": true,
+          "evidence": "标题加粗正常解析，无裸露星号"
+        },
+        {
+          "text": "剥掉标签后仍能看到全部 4 个框的正文内容",
+          "passed": true,
+          "evidence": "4 个高亮框的正文全部保留"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.2,
+        "passed": 1,
+        "failed": 4,
+        "total": 5,
+        "time_seconds": 1.519,
+        "tokens": 3147,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "分隔线被保留为可见的分隔符（不是整条消失）",
+          "passed": false,
+          "evidence": "分隔线消失（hr 被吞掉，基线缺陷 1 复现）"
+        },
+        {
+          "text": "引用块保留多行换行，没有被压成一行",
+          "passed": false,
+          "evidence": "引用块内换行符 0 个（需要 ≥2）"
+        },
+        {
+          "text": "引用块里的加粗没有丢失",
+          "passed": false,
+          "evidence": "引用块内的加粗丢失"
+        },
+        {
+          "text": "代码块保留至少 4 行换行",
+          "passed": false,
+          "evidence": "没有找到代码块"
+        },
+        {
+          "text": "表格被保留下来",
+          "passed": true,
+          "evidence": "表格保留且表头内容在"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.2,
+        "passed": 1,
+        "failed": 4,
+        "total": 5,
+        "time_seconds": 1.541,
+        "tokens": 3147,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "分隔线被保留为可见的分隔符（不是整条消失）",
+          "passed": false,
+          "evidence": "分隔线消失（hr 被吞掉，基线缺陷 1 复现）"
+        },
+        {
+          "text": "引用块保留多行换行，没有被压成一行",
+          "passed": false,
+          "evidence": "引用块内换行符 0 个（需要 ≥2）"
+        },
+        {
+          "text": "引用块里的加粗没有丢失",
+          "passed": false,
+          "evidence": "引用块内的加粗丢失"
+        },
+        {
+          "text": "代码块保留至少 4 行换行",
+          "passed": false,
+          "evidence": "没有找到代码块"
+        },
+        {
+          "text": "表格被保留下来",
+          "passed": true,
+          "evidence": "表格保留且表头内容在"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.2,
+        "passed": 1,
+        "failed": 4,
+        "total": 5,
+        "time_seconds": 1.618,
+        "tokens": 3147,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "分隔线被保留为可见的分隔符（不是整条消失）",
+          "passed": false,
+          "evidence": "分隔线消失（hr 被吞掉，基线缺陷 1 复现）"
+        },
+        {
+          "text": "引用块保留多行换行，没有被压成一行",
+          "passed": false,
+          "evidence": "引用块内换行符 0 个（需要 ≥2）"
+        },
+        {
+          "text": "引用块里的加粗没有丢失",
+          "passed": false,
+          "evidence": "引用块内的加粗丢失"
+        },
+        {
+          "text": "代码块保留至少 4 行换行",
+          "passed": false,
+          "evidence": "没有找到代码块"
+        },
+        {
+          "text": "表格被保留下来",
+          "passed": true,
+          "evidence": "表格保留且表头内容在"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 2,
+        "failed": 3,
+        "total": 5,
+        "time_seconds": 1.553,
+        "tokens": 1250,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 1250 字节，退出码 0"
+        },
+        {
+          "text": "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+          "passed": false,
+          "evidence": "丢失内容: ['能力', '状态', '主题', '已支持', 'Callout']"
+        },
+        {
+          "text": "列表项保留为 ul/ol + li，没有被压成普通段落",
+          "passed": false,
+          "evidence": "li 0 个，ul/ol 缺失（列表被压成普通段落）"
+        },
+        {
+          "text": "表格保留为 table 元素",
+          "passed": false,
+          "evidence": "表格丢失"
+        },
+        {
+          "text": "不含 h1 / div / script / style 等违规标签",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "without_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 2,
+        "failed": 3,
+        "total": 5,
+        "time_seconds": 1.358,
+        "tokens": 1250,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 1250 字节，退出码 0"
+        },
+        {
+          "text": "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+          "passed": false,
+          "evidence": "丢失内容: ['能力', '状态', '主题', '已支持', 'Callout']"
+        },
+        {
+          "text": "列表项保留为 ul/ol + li，没有被压成普通段落",
+          "passed": false,
+          "evidence": "li 0 个，ul/ol 缺失（列表被压成普通段落）"
+        },
+        {
+          "text": "表格保留为 table 元素",
+          "passed": false,
+          "evidence": "表格丢失"
+        },
+        {
+          "text": "不含 h1 / div / script / style 等违规标签",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "without_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 2,
+        "failed": 3,
+        "total": 5,
+        "time_seconds": 1.298,
+        "tokens": 1250,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "输出了非空的 HTML 文件",
+          "passed": true,
+          "evidence": "输出 1250 字节，退出码 0"
+        },
+        {
+          "text": "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+          "passed": false,
+          "evidence": "丢失内容: ['能力', '状态', '主题', '已支持', 'Callout']"
+        },
+        {
+          "text": "列表项保留为 ul/ol + li，没有被压成普通段落",
+          "passed": false,
+          "evidence": "li 0 个，ul/ol 缺失（列表被压成普通段落）"
+        },
+        {
+          "text": "表格保留为 table 元素",
+          "passed": false,
+          "evidence": "表格丢失"
+        },
+        {
+          "text": "不含 h1 / div / script / style 等违规标签",
+          "passed": true,
+          "evidence": "h1/div/script/style/iframe 均未出现"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 1.472,
+        "tokens": 1735,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+          "passed": true,
+          "evidence": "「用 Python」「2026 年」都已补空格"
+        },
+        {
+          "text": "代码块内的 range(3) 没有被插入空格",
+          "passed": true,
+          "evidence": "代码块内 range(3) 保持原样"
+        },
+        {
+          "text": "本地图片被嵌入为 data:image/png;base64",
+          "passed": false,
+          "evidence": "本地图片没嵌入（src 仍是本地路径）"
+        },
+        {
+          "text": "img 标签带 max-width 样式",
+          "passed": false,
+          "evidence": "img 缺 max-width"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "without_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 1.422,
+        "tokens": 1735,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+          "passed": true,
+          "evidence": "「用 Python」「2026 年」都已补空格"
+        },
+        {
+          "text": "代码块内的 range(3) 没有被插入空格",
+          "passed": true,
+          "evidence": "代码块内 range(3) 保持原样"
+        },
+        {
+          "text": "本地图片被嵌入为 data:image/png;base64",
+          "passed": false,
+          "evidence": "本地图片没嵌入（src 仍是本地路径）"
+        },
+        {
+          "text": "img 标签带 max-width 样式",
+          "passed": false,
+          "evidence": "img 缺 max-width"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "configuration": "without_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 1.484,
+        "tokens": 1735,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "中文与英文/数字之间补了空格（用 Python / 2026 年）",
+          "passed": true,
+          "evidence": "「用 Python」「2026 年」都已补空格"
+        },
+        {
+          "text": "代码块内的 range(3) 没有被插入空格",
+          "passed": true,
+          "evidence": "代码块内 range(3) 保持原样"
+        },
+        {
+          "text": "本地图片被嵌入为 data:image/png;base64",
+          "passed": false,
+          "evidence": "本地图片没嵌入（src 仍是本地路径）"
+        },
+        {
+          "text": "img 标签带 max-width 样式",
+          "passed": false,
+          "evidence": "img 缺 max-width"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 1.5841,
+        "stddev": 0.0929,
+        "min": 1.456,
+        "max": 1.771
+      },
+      "tokens": {
+        "mean": 4345.6667,
+        "stddev": 1780.3112,
+        "min": 2446,
+        "max": 7726
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.5583,
+        "stddev": 0.263,
+        "min": 0.2,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 1.4846,
+        "stddev": 0.0785,
+        "min": 1.298,
+        "max": 1.618
+      },
+      "tokens": {
+        "mean": 2175.5,
+        "stddev": 764.9518,
+        "min": 1250,
+        "max": 3167
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.44",
+      "time_seconds": "+0.1",
+      "tokens": "+2170"
+    }
+  },
+  "notes": [
+    "非区分性断言 14 条（两种配置都过，测的是基线也具备的基本功）：basic×4、themed×2、callouts×3、structure×1、sample-report×2、cjk-images×2 —— 下次迭代应把这些换成更难的判据",
+    "每个「用例 × 配置」的 3 次运行结果完全一致，方差为 0 —— 这是确定性脚本该有的样子，可复现性好；同时也意味着它对输入措辞不敏感（换成 LLM 执行就会有方差）",
+    "区分度最高的用例是 structure（+80%），最低的是 basic（+0%）—— 前者最能说明技能的价值，后者说明这条路径基线也能走通",
+    "技能平均每次多花 0.10 秒（with 1.58s vs without 1.48s），代价可以忽略"
+  ]
+}

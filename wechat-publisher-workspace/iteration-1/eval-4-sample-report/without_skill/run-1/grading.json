@@ -1,0 +1,58 @@
+{
+  "expectations": [
+    {
+      "text": "输出了非空的 HTML 文件",
+      "passed": true,
+      "evidence": "输出 1250 字节，退出码 0"
+    },
+    {
+      "text": "Word 里的每一段文字（标题/正文/列表项/引用/表格单元格）都出现在输出里",
+      "passed": false,
+      "evidence": "丢失内容: ['能力', '状态', '主题', '已支持', 'Callout']"
+    },
+    {
+      "text": "列表项保留为 ul/ol + li，没有被压成普通段落",
+      "passed": false,
+      "evidence": "li 0 个，ul/ol 缺失（列表被压成普通段落）"
+    },
+    {
+      "text": "表格保留为 table 元素",
+      "passed": false,
+      "evidence": "表格丢失"
+    },
+    {
+      "text": "不含 h1 / div / script / style 等违规标签",
+      "passed": true,
+      "evidence": "h1/div/script/style/iframe 均未出现"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 3,
+    "total": 5,
+    "pass_rate": 0.4
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "executor": 1,
+      "grader": 5
+    },
+    "total_tool_calls": 6,
+    "total_steps": 1,
+    "files_created": [
+      "article.html",
+      "stdout.txt"
+    ],
+    "errors_encountered": 0,
+    "output_chars": 1250,
+    "transcript_chars": 546
+  },
+  "timing": {
+    "total_duration_seconds": 1.553
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

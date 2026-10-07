@@ -1,0 +1,12 @@
+$ python.exe convert_to_wechat.py themed.md C:\Users\lrx\AppData\Local\Temp\c4b_eval_a0u59qds\article.html --quiet --theme blue --toc
+
+[exit 0]  1.77s
+
+--- stdout ---
+
+[OK] C:\Users\lrx\AppData\Local\Temp\c4b_eval_a0u59qds\article.html 已生成（5.5 KB，主题：蓝色 · 科技学术）
+     已生成自动目录
+     自检通过：无违规标签 / 无 class / 无 JS
+
+--- stderr ---
+

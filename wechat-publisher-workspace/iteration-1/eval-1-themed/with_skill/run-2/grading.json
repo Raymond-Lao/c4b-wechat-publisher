@@ -1,0 +1,53 @@
+{
+  "expectations": [
+    {
+      "text": "h2 主色是该主题的蓝色（#1a73e8）",
+      "passed": true,
+      "evidence": "h2 主色 = #1a73e8"
+    },
+    {
+      "text": "开头出现作者署名与摘要文字",
+      "passed": true,
+      "evidence": "作者署名与摘要都出现在开头"
+    },
+    {
+      "text": "目录列出了全部 3 个 h2 小标题",
+      "passed": true,
+      "evidence": "3 个 h2 都出现在目录中（各出现 ≥2 次）"
+    },
+    {
+      "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+      "passed": true,
+      "evidence": "目录里没有样式文本泄漏"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "executor": 1,
+      "grader": 4
+    },
+    "total_tool_calls": 5,
+    "total_steps": 1,
+    "files_created": [
+      "article.html",
+      "stdout.txt"
+    ],
+    "errors_encountered": 0,
+    "output_chars": 4662,
+    "transcript_chars": 140
+  },
+  "timing": {
+    "total_duration_seconds": 1.677
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

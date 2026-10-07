@@ -1,0 +1,53 @@
+{
+  "expectations": [
+    {
+      "text": "h2 主色是该主题的蓝色（#1a73e8）",
+      "passed": false,
+      "evidence": "h2 主色 = #333"
+    },
+    {
+      "text": "开头出现作者署名与摘要文字",
+      "passed": true,
+      "evidence": "作者署名与摘要都出现在开头"
+    },
+    {
+      "text": "目录列出了全部 3 个 h2 小标题",
+      "passed": false,
+      "evidence": "目录没列出: ['一、主题决定了文章的第一印象', '二、长文必须有目录', '三、元数据的三个字段']"
+    },
+    {
+      "text": "目录里没有把 padding-left 之类的 CSS 文本泄漏出来",
+      "passed": true,
+      "evidence": "目录里没有样式文本泄漏"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "executor": 1,
+      "grader": 4
+    },
+    "total_tool_calls": 5,
+    "total_steps": 1,
+    "files_created": [
+      "article.html",
+      "stdout.txt"
+    ],
+    "errors_encountered": 0,
+    "output_chars": 2160,
+    "transcript_chars": 535
+  },
+  "timing": {
+    "total_duration_seconds": 1.503
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  }
+}

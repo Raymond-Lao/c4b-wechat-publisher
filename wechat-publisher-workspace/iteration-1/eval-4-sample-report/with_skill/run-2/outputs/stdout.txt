@@ -1,0 +1,11 @@
+$ python.exe convert_to_wechat.py sample_report.docx C:\Users\lrx\AppData\Local\Temp\c4b_eval_b9u52rcm\article.html --quiet
+
+[exit 0]  1.56s
+
+--- stdout ---
+
+[OK] C:\Users\lrx\AppData\Local\Temp\c4b_eval_b9u52rcm\article.html 已生成（2.8 KB，主题：默认 · 中性灰）
+     自检通过：无违规标签 / 无 class / 无 JS
+
+--- stderr ---
+

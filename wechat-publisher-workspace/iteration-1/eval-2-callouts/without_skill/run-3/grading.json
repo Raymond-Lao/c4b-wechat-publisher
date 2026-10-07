@@ -1,0 +1,53 @@
+{
+  "expectations": [
+    {
+      "text": "4 个高亮框都被渲染成带背景色的块",
+      "passed": false,
+      "evidence": "带底色高亮块 0 个，缺失标题 无"
+    },
+    {
+      "text": "practice 框里的 3 条有序列表文字全部保留",
+      "passed": true,
+      "evidence": "列表项齐全，编号标记 在"
+    },
+    {
+      "text": "高亮框标题里的 ** 加粗正常解析，没有裸露星号",
+      "passed": true,
+      "evidence": "标题加粗正常解析，无裸露星号"
+    },
+    {
+      "text": "剥掉标签后仍能看到全部 4 个框的正文内容",
+      "passed": true,
+      "evidence": "4 个高亮框的正文全部保留"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "executor": 1,
+      "grader": 4
+    },
+    "total_tool_calls": 5,
+    "total_steps": 1,
+    "files_created": [
+      "article.html",
+      "stdout.txt"
+    ],
+    "errors_encountered": 0,
+    "output_chars": 1594,
+    "transcript_chars": 537
+  },
+  "timing": {
+    "total_duration_seconds": 1.52
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  }
+}
